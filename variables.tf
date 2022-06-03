@@ -210,3 +210,9 @@ variable "cloudwatch_metric_alarms_enabled" {
   description = "Boolean flag to enable/disable CloudWatch metrics alarms"
   default     = false
 }
+
+variable "global_replication_group_id" {
+  type = string
+  description = "ID of Global Data Store that indicates the Redis cluster is a secondary type cluster to be attached to the instance"
+  default = ""
+}
