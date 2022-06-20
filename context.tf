@@ -78,38 +78,38 @@ variable "context" {
 }
 
 variable "enabled" {
-  type        = bool
-  default     = null
+  type = bool
+  default = null
   description = "Set to false to prevent the module from creating any resources"
 }
 
 variable "namespace" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = "Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp'"
 }
 
 variable "environment" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = "Environment, e.g. 'uw2', 'us-west-2', OR 'prod', 'staging', 'dev', 'UAT'"
 }
 
 variable "stage" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = "Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release'"
 }
 
 variable "name" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = "Solution name, e.g. 'app' or 'jenkins'"
 }
 
 variable "delimiter" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = <<-EOT
     Delimiter to be used between `namespace`, `environment`, `stage`, `name` and `attributes`.
     Defaults to `-` (hyphen). Set to `""` to use no delimiter at all.
@@ -145,8 +145,8 @@ variable "label_order" {
 }
 
 variable "regex_replace_chars" {
-  type        = string
-  default     = null
+  type = string
+  default = null
   description = <<-EOT
     Regex to replace chars with empty string in `namespace`, `environment`, `stage` and `name`.
     If not set, `"/[^a-zA-Z0-9-]/"` is used to remove all characters other than hyphens, letters and digits.

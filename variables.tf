@@ -212,7 +212,7 @@ variable "cloudwatch_metric_alarms_enabled" {
 }
 
 variable "global_replication_group_id" {
-  type = string
+  type        = string
   description = "ID of Global Data Store that indicates the Redis cluster is a secondary type cluster to be attached to the instance"
-  default = ""
+  default     = ""
 }

@@ -99,7 +99,8 @@ resource "aws_elasticache_replication_group" "default" {
   snapshot_window               = var.snapshot_window
   snapshot_retention_limit      = var.snapshot_retention_limit
   apply_immediately             = var.apply_immediately
-  global_replication_group_id   = var.global_replication_group_id == "" ? var.global_replication_group_id : null
+  auto_minor_version_upgrade    = var.global_replication_group_id == "" ? null : false
+  global_replication_group_id   = var.global_replication_group_id == "" ? null : var.global_replication_group_id
 
   tags = module.this.tags
 
